@@ -16,27 +16,21 @@
                 </lightgallery>
             </div>
         </div> -->
-        
     </div>
 </div>
-
 <section class="events-area bg-f9f9f9 pt-100 pb-70">
     <div class="container">
         <div class="section-title">
-            <!-- <span class="sub-title">Events</span> -->
             <h2>Sık Sorulan Sorular</h2>
-            <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p> -->
         </div>
         <div class="row">
-
              <div class="faq-accordion faq-accordion-style-two">
-                <div class="accordion-item" *ngFor="let item of accordionItems; let i = index;">
-                    <div class="accordion-header" (click)="toggleAccordionItem(item)">
-                        {{ item.title }}
+                <div class="accordion-item" *ngFor="let item of faqModel;let i = index;">
+                    <div class="accordion-header" (click)="toggleAccordionItem(item) ">
+                        {{ item.question }}
                         <i class='bx' [ngClass]="{'bx-chevron-down': !item.open, 'bx-chevron-up': item.open}"></i>
                     </div>
-                    <div class="accordion-content" [hidden]="!item.open">
-                        {{ item.content }}
+                    <div class="accordion-content" [hidden]="!item.open" [innerHTML]="item.answer">
                     </div>
                 </div>
             </div>
