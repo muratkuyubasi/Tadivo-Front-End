@@ -52,48 +52,43 @@
     <div class="container">
         <div class="section-title">
             <span class="sub-title">Contact Us</span>
-            <h2>Drop us Message for any Query</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <h2>Sorularınız, önerileriniz veya talepleriniz için bizimle iletişime geçebilirsiniz...</h2>
         </div>
         <div class="contact-form">
-            <form #contactForm="ngForm" (ngSubmit)="submit(contactForm.value)">
+            <form id="contactForm" [formGroup]="form"  (ngSubmit)="submitForm()">
                 <div class="row">
                     <div class="col-lg-6 col-md-12">
                         <div class="form-group">
-                            <input required minlength="3" maxlength="50" ngModel name="name" type="text" #name="ngModel" class="form-control" id="name" placeholder="Your name">
-                            <div class="alert alert-danger" *ngIf="name.touched && !name.valid">
-                                <div *ngIf="name.errors.required">Name is required.</div>
-                                <div *ngIf="name.errors.minlength">Name is minimum {{ name.errors.minlength.requiredLength }} character.</div>
-                                <div *ngIf="name.errors.maxlength">Name is maximum 50 character.</div>
-                            </div>
+                            <input required minlength="3" maxlength="50" name="firstName" formControlName="firstName" id="name" type="text"  class="form-control" placeholder="Adınız">
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-12">
                         <div class="form-group">
-                            <input required ngModel name="email" type="text" #email="ngModel" class="form-control" id="email" placeholder="Your email address">
-                            <div class="alert alert-danger" *ngIf="email.touched && !email.valid">Email Address is required.</div>
+                            <input required minlength="3" maxlength="50" name="lastName" formControlName="lastName" id="lastName"class="form-control"  placeholder="Soyadınız">
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-12">
                         <div class="form-group">
-                            <input required ngModel name="number" type="text" #number="ngModel" class="form-control" id="number" placeholder="Your phone number">
-                            <div class="alert alert-danger" *ngIf="number.touched && !number.valid">Phone number is required.</div>
+                            <input required id="email" name="email" formControlName="email" type="text"  class="form-control" placeholder="E-Postanız">
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-12">
                         <div class="form-group">
-                            <input required ngModel name="subject" type="text" #subject="ngModel" class="form-control" id="subject" placeholder="Your subject">
-                            <div class="alert alert-danger" *ngIf="subject.touched && !subject.valid">Phone subject is required.</div>
+                            <input required name="phone" id="phone" formControlName="phone" class="form-control" placeholder="Telefonunuz">
                         </div>
                     </div>
                     <div class="col-lg-12 col-md-12">
                         <div class="form-group">
-                            <textarea required ngModel #message="ngModel" name="message" id="message" cols="30" rows="5" class="form-control" placeholder="Your message..."></textarea>
-                            <div class="alert alert-danger" *ngIf="message.touched && !name.valid">Message is required.</div>
+                            <input required name="subject" formControlName="subject" id="name" class="form-control"  placeholder="Konunuz">
                         </div>
                     </div>
                     <div class="col-lg-12 col-md-12">
-                        <button type="submit" class="default-btn" [class.disabled]="!contactForm.valid"><i class='bx bx-paper-plane icon-arrow before'></i><span class="label">Send Message</span><i class="bx bx-paper-plane icon-arrow after"></i></button>
+                        <div class="form-group">
+                            <textarea required name="message" id="message" formControlName="message" cols="30" rows="5" class="form-control" placeholder="Mesajınız..."></textarea>
+                        </div>
+                    </div>
+                    <div class="col-lg-12 col-md-12">
+                        <button type="submit" class="default-btn" ><i class='bx bx-paper-plane icon-arrow before'></i><span class="label">Mesaj Gönder</span><i class="bx bx-paper-plane icon-arrow after"></i></button>
                     </div>
                 </div>
             </form>
