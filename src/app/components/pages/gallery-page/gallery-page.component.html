@@ -15,9 +15,11 @@
 <div class="gallery-area pt-100 pb-70">
     <div class="container">
         <div class="row">
-            <div class="col-lg-4 col-md-6 col-sm-6" *ngFor="let image of _album; let i=index">
+            <div class="col-lg-4 col-md-6 col-sm-6" *ngFor="let data of _album; let i=index">
+                
                 <div class="single-gallery-item mb-30">
-                    <img [src]="image.thumb" (click)="open(i)" />
+                    <img img [src]="data.thumb"(click)="open(i)" alt="Image">
+
                 </div>
             </div>
         </div>
