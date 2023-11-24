@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { OwlOptions } from 'ngx-owl-carousel-o';
+import { ContentsModel } from 'src/app/components/models/contentsModel';
 import { ContentsService } from 'src/app/components/services/contents.service';
 import { environment } from 'src/environments/environment';
 
@@ -11,7 +12,7 @@ import { environment } from 'src/environments/environment';
 export class HomeeightMainBannerComponent implements OnInit {
 
   path = environment.serverUrl;
-  slidersModel!: any;
+  slidersModel!: ContentsModel;
   constructor(private contentsService: ContentsService) { }
 
   ngOnInit(): void {

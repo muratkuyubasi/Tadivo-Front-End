@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ContactService } from '../../services/contact.service';
+import { ContentsModel } from '../../models/contentsModel';
+import { ContentsService } from '../../services/contents.service';
 
 @Component({
   selector: 'app-blog-grid-page',
@@ -7,9 +10,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BlogGridPageComponent implements OnInit {
 
-  constructor() { }
+  newsModel:ContentsModel
+  constructor(private contentsService:ContentsService) { }
 
   ngOnInit(): void {
+    this.newsList();
   }
-
+  newsList(){
+    this.contentsService.getnewsList().subscribe(newsdata=> {
+      this.newsModel = newsdata;
+      // console.log("Haberler",this.newsModel)
+    })
+  }
 }

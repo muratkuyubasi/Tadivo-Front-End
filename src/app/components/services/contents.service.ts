@@ -14,13 +14,14 @@ export class ContentsService {
     constructor(
         private httpClient: HttpClient) { }
 
-     
+     //HABER
         getnewsList():any {
             return this.httpClient.get<any>(this.path+"/AnnouncementAPI/GetList?typeId=3&languageId=1");
         }
         getid(id: string): Observable<any> {
             return this.httpClient.get<any>(this.path + "/AnnouncementAPI/GetById?id="+id)
         }
+        //SLİDER
         getsldiderList():any {
             return this.httpClient.get<any>(this.path+"/AnnouncementAPI/GetList?typeId=2&languageId=1");
         }

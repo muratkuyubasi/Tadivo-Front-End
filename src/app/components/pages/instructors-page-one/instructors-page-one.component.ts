@@ -17,11 +17,10 @@ export class InstructorsPageOneComponent implements OnInit {
   ngOnInit(): void {
     this.getourteamslist();
   }
-
   getourteamslist() {
     this.ourteamService.getList().subscribe(data => {
       this.ourteamModel = data;
-      console.log("Ekibimiz",this.ourteamModel)
+      // console.log("Ekibimiz",this.ourteamModel)
     })
   }
 }
