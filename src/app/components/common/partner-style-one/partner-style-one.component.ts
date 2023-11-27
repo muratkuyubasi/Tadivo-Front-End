@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { OwlOptions } from 'ngx-owl-carousel-o';
+import { environment } from 'src/environments/environment';
+import { ReferanceService } from '../../services/referance.service';
+import { ReferanceModel } from '../../models/referanceModel';
 
 @Component({
     selector: 'app-partner-style-one',
@@ -7,11 +10,22 @@ import { OwlOptions } from 'ngx-owl-carousel-o';
     styleUrls: ['./partner-style-one.component.scss']
 })
 export class PartnerStyleOneComponent implements OnInit {
+	path = environment.serverUrl;
 
-    constructor() { }
+	referanceModel:ReferanceModel
+    constructor(private referanceService:ReferanceService) { }
 
     ngOnInit(): void {
+		this.referancelist();
     }
+
+	referancelist() {
+		this.referanceService.getList().subscribe(data => {
+			this.referanceModel = data;
+			console.log("Referanslar",this.referanceModel)
+		})
+	}
+
 
     partnerSlides: OwlOptions = {
 		loop: true,
