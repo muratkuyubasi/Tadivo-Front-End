@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ReferanceService } from '../../services/referance.service';
+import { ReferanceModel } from '../../models/referanceModel';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-partner-page',
@@ -7,9 +10,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PartnerPageComponent implements OnInit {
 
-  constructor() { }
+  path = environment.serverUrl;
 
-  ngOnInit(): void {
-  }
+	referanceModel:ReferanceModel
+    constructor(private referanceService:ReferanceService) { }
 
+    ngOnInit(): void {
+		this.referancelist();
+    }
+
+	referancelist() {
+		this.referanceService.getList().subscribe(data => {
+			this.referanceModel = data;
+		})
+	}
 }

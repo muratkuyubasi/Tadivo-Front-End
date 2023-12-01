@@ -4,10 +4,12 @@
 export const environment = {
   production: false,
   // apiUrl:"https://zsutourapi.musdav.org.tr/api",
-  apiUrl:"https://localhost:7217/api", 
-  serverUrl:"https://localhost:7217"
-    // serverUrl:"https://zsutourapi.musdav.org.tr/"
+  apiUrl:"https://tadivoapi.musdav.org.tr/api",
+  // apiUrl:"https://localhost:7217/api", 
+  // serverUrl:"https://localhost:7217"
+    serverUrl:"https://tadivoapi.musdav.org.tr/"
   };
+
 
 /*
  * For easier debugging in development mode, you can import the following file

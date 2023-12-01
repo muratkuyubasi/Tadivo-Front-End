@@ -51,4 +51,29 @@ export class HomeeightMainBannerComponent implements OnInit {
     },
   };
 
+
+  homeSlides: OwlOptions = {
+		loop: true,
+		nav: true,
+		dots: true,
+		autoplayHoverPause: true,
+		autoplay: true,
+    responsive:{
+      0: {
+        items: 1,
+      },
+      768: {
+        items: 1,
+      },
+      1170: {
+        items: 1,
+      },
+    },
+		items: 1,
+		autoHeight: true,
+		navText: [
+			"<i class='bx bx-chevron-left'></i>",
+			"<i class='bx bx-chevron-right'></i>"
+		]
+    }
 }

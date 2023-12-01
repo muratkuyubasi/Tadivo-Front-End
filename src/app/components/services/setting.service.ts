@@ -19,4 +19,7 @@ export class SettingService {
             return this.httpClient.get<any>(this.path + "/SocialMediaAPI/GetByKeyAndLanguageId?key="+key+"&languageId="+languageId)
         }
        
+        getcontact(key: string,languageId: number): Observable<any> {
+            return this.httpClient.get<any>(this.path + "/SiteSettingAPI/GetByKeyAndLanguageId?key="+key+"&languageId="+languageId)
+        }
     }

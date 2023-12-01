@@ -1,13 +1,13 @@
-<app-header-style-two></app-header-style-two>
+<app-header-style-seven></app-header-style-seven>
 
 <div class="page-title-area item-bg2">
     <div class="container">
         <div class="page-title-content">
-            <ul>
+            <!-- <ul>
                 <li><a href="index.html">Home</a></li>
                 <li>Contact</li>
-            </ul>
-            <h2>Contact Us</h2>
+            </ul> -->
+            <h2>İletişim</h2>
         </div>
     </div>
 </div>
@@ -20,9 +20,9 @@
                     <div class="icon">
                         <i class='bx bx-envelope'></i>
                     </div>
-                    <h3>Email Here</h3>
-                    <p><a href="mailto:hello@ednuv.com">hello@ednuv.com</a></p>
-                    <p><a href="mailto:ednuv@hello.com">ednuv@hello.com</a></p>
+                    <h3>Email</h3>
+                    <p><a href="mailto:{{mailModel.value}}">{{mailModel.value}}</a></p>
+                    <!-- <p><a href="mailto:ednuv@hello.com">ednuv@hello.com</a></p> -->
                 </div>
             </div>
             <div class="col-lg-4 col-md-6 col-sm-6">
@@ -30,8 +30,8 @@
                     <div class="icon">
                         <i class='bx bx-map'></i>
                     </div>
-                    <h3>Location Here</h3>
-                    <p><a href="https://goo.gl/maps/Mii9keyeqXeNH4347" target="_blank">2750 Quadra Street Victoria Road, New York, United States</a></p>
+                    <h3>Adres</h3>
+                    <p><a href="https://www.google.com.tr/maps/place/M%C3%9CSDAV/39.9342068,32.8644314,17z/data=!3m1!4b1!4m5!3m4!1s0x14d34e42e68a7fef:0xeff206856f992fc8!8m2!3d39.9342075!4d32.8666317?hl=tr" target="_blank">{{adresModel.value}}</a></p>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6 col-sm-6 offset-lg-0 offset-md-3 offset-sm-3">
@@ -39,9 +39,9 @@
                     <div class="icon">
                         <i class='bx bx-phone-call'></i>
                     </div>
-                    <h3>Call Here</h3>
-                    <p><a href="tel:1234567890">+123 456 7890</a></p>
-                    <p><a href="tel:2414524526">+241 452 4526</a></p>
+                    <h3>Telefon</h3>
+                    <p><a href="tel:1234567890">{{phoneModel.value}}</a></p>
+                    <!-- <p><a href="tel:2414524526">+241 452 4526</a></p> -->
                 </div>
             </div>
         </div>
@@ -51,7 +51,7 @@
 <div class="contact-area pb-100">
     <div class="container">
         <div class="section-title">
-            <span class="sub-title">Contact Us</span>
+            <!-- <span class="sub-title">Contact Us</span> -->
             <h2>Sorularınız, önerileriniz veya talepleriniz için bizimle iletişime geçebilirsiniz...</h2>
         </div>
         <div class="contact-form">

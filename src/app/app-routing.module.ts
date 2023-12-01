@@ -82,7 +82,7 @@ const routes: Routes = [
     {path: 'about-style-2', component: AboutPageTwoComponent},
     {path: 'instructor-1', component: InstructorsPageOneComponent},
     {path: 'instructor-2', component: InstructorsPageTwoComponent},
-    {path: 'instructor-3', component: InstructorsPageThreeComponent},
+    {path: 'certificates', component: InstructorsPageThreeComponent},
     {path: 'single-instructor', component: InstructorsDetailsPageComponent},
     {path: 'gallery', component: GalleryPageComponent},
     {path: 'events', component: EventsPageComponent},

@@ -1,4 +1,3 @@
-
 export interface OurTeamModel {
     username:string;
     photo:string;
@@ -9,4 +8,3 @@ export interface OurTeamModel {
     twitter:string;
     order:number
     }
-    

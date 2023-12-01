@@ -8,12 +8,8 @@ import { environment } from "src/environments/environment";
 })
 export class CategoryService {
     path: string = environment.apiUrl;
-
-
     constructor(
         private httpClient: HttpClient) { }
-
-     
         getList():any {
             return this.httpClient.get<any>(this.path+"/CategoryAPI/GetList");
         }

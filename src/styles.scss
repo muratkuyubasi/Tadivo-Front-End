@@ -2135,19 +2135,19 @@ textarea.form-control {
     position: relative;
     z-index: 1;
     background: {
-        color: var(--mainColor);
+        color: #000;
         position: center center;
         size: cover;
         repeat: no-repeat;
     };
     padding: {
-        top: 330px;
+        top: 70px;
         bottom: 120px;
     };
     &.page-title-style-two {
         padding: {
-            top: 280px;
-            bottom: 120px;
+            top: 30px;
+            bottom: 60px;
         };
     }
     &.page-title-style-three {
@@ -2158,22 +2158,22 @@ textarea.form-control {
     }
     &.item-bg1 {
         background: {
-            image: url(assets/img/page-title/page-title1.jpg);
+            // image: url(assets/img/page-title/page-title1.jpg);
         };
     }
     &.item-bg2 {
         background: {
-            image: url(assets/img/page-title/page-title2.jpg);
+            // image: url(assets/img/page-title/page-title2.jpg);
         };
     }
     &.item-bg3 {
         background: {
-            image: url(assets/img/page-title/page-title3.jpg);
+            // image: url(assets/img/page-title/page-title3.jpg);
         };
     }
     &.item-bg4 {
         background: {
-            image: url(assets/img/page-title/page-title4.jpg);
+            // image: url(assets/img/page-title/page-title4.jpg);
         };
     }
 }
